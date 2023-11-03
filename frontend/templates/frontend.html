@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+ 
+ {% load static %}
+
+<!-- frontend_view.html -->
+{% block content %}
+    <h1>User Tasks</h1>
+    <div id="taskList"></div>
+    
+    {{ user_data.username }}
+    {{ user_data.email}}
+ 
+    <pre>{{ user_data }}</pre>
+
+
+    <button hx-get="/frontend/load_content/" hx-target="#content">Load Content</button>
+    <div id="content"></div>
+
+    
+    <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
+{% endblock content %}
