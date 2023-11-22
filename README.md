@@ -10,10 +10,10 @@ Django based TODO app, called GetShitDone
   - [Prerequisites](#prerequisites)
   ## Description
   Simple todo app with login and abillity to create manipulate tasks. Goofying around with DJANGO, HTMX and some Django Rest -
-  however the API is not used on the frontend
+  however the API is not used on the frontend. 
   
   ##Features
-  CRUD and API
+  Template based, CRUD and API, USER based, Boostrap Dashboard, Updating and Deleting tasks are just forms in a html file
 
   ##Prerequisits
   Django, Django Rest Framework, Boostrap 5, HTMX
