@@ -1,5 +1,5 @@
 # getshitdone
-Brief project description goes here.
+Django based TODO app, called GetShitDone
 
 ## Table of Contents
 
