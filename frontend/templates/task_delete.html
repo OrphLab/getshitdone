@@ -1,0 +1,9 @@
+{% load crispy_forms_tags %}
+{% load static %} 
+{% block titel %} Delete Task {% endblock %} 
+
+<form method='post'>
+    {% csrf_token %}
+    {{ form|crispy }}   
+    <button type="submit" class="btn btn-success">Delete</button>
+    

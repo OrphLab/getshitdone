@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'frontend.apps.FrontendConfig',
     'rest_framework', 
     "crispy_forms",       
-    "crispy_bootstrap4"]
+    "crispy_bootstrap4", 
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -108,6 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -138,7 +140,11 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'gsd.User'
-AUTHENTICATION_BACKENDS = ['gsd.authentication.EmailAuthBackend']
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
+LOGIN_REDIRECT_URL = 'frontend:dashboard'
+LOGIN_URL = 'frontend:login' 
+LOGOUT_REDIRECT_URL = 'frontend:login'
+
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES':['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly']
